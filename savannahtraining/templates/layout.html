@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Savannah Training{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/main.js' %}" defer crossorigin="anonymous"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        header { background: #2d7b4f; color: #fff; padding: 20px 0; text-align: center; }
+        main { padding: 40px 20px; max-width: 800px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
+        h1 { margin-top: 0; }
+        footer { text-align: center; padding: 20px 0; color: #888; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    {% block header %}
+    <header>
+        <h1>Savannah Training</h1>
+        <nav>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px;">
+            <li><a href="/" style="color: #fff; text-decoration: none; font-weight: bold;">🏠 Home</a></li>
+            <li><a href="/about" style="color: #fff; text-decoration: none; font-weight: bold;">ℹ️ About</a></li>
+            <li><a href="/posts" style="color: #fff; text-decoration: none; font-weight: bold;">📝 Posts</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% endblock %}
+    {% block styles %}{% endblock %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        &copy; 2024 Savannah Training
+    </footer>
+</body>
+</html>
