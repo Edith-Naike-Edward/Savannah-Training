@@ -21,9 +21,15 @@
         <h1>Savannah Training</h1>
         <nav>
             <ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 30px;">
-            <li><a href="/" style="color: #fff; text-decoration: none; font-weight: bold;">🏠 Home</a></li>
-            <li><a href="/about" style="color: #fff; text-decoration: none; font-weight: bold;">ℹ️ About</a></li>
-            <li><a href="/posts" style="color: #fff; text-decoration: none; font-weight: bold;">📝 Posts</a></li>
+            <li><a href="/" style="color: #fff; text-decoration: none; font-weight: bold;">
+                <span role="img" aria-label="Home">🏠 Home </span>
+            </a></li>
+            <li><a href="/about" style="color: #fff; text-decoration: none; font-weight: bold;">
+                <span role="img" aria-label="About">ℹ️ About</span>
+            </a></li>
+            <li><a href="{%url 'posts:list' %}" style="color: #fff; text-decoration: none; font-weight: bold;">
+                <span role="img" aria-label="Posts">ℹ📝 Posts</span>
+                </a></li>
             </ul>
         </nav>
     </header>
